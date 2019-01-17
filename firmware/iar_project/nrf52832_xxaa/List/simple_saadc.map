@@ -1,0 +1,562 @@
+###############################################################################
+#
+# IAR ELF Linker V7.80.2.11947/W32 for ARM                17/Jan/2019  18:30:41
+# Copyright 2007-2016 IAR Systems AB.
+#
+#    Output file  =  
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Exe\simple_saadc.out
+#    Map file     =  
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\List\simple_saadc.map
+#    Command line =  
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Obj\app_error.o
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Obj\app_error_handler_iar.o
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Obj\app_error_weak.o
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Obj\app_util_platform.o
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Obj\main.o
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Obj\nrf_assert.o
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Obj\nrf_atomic.o
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Obj\nrf_balloc.o
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Obj\nrf_fprintf.o
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Obj\nrf_fprintf_format.o
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Obj\nrf_log_backend_rtt.o
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Obj\nrf_log_backend_serial.o
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Obj\nrf_log_default_backends.o
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Obj\nrf_log_frontend.o
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Obj\nrf_log_str_formatter.o
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Obj\nrf_memobj.o
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Obj\nrf_pwr_mgmt.o
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Obj\nrf_strerror.o
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Obj\nrfx_saadc.o
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Obj\SEGGER_RTT.o
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Obj\SEGGER_RTT_printf.o
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Obj\SEGGER_RTT_Syscalls_IAR.o
+#        -o
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Exe\simple_saadc.out
+#        --redirect _Printf=_PrintfFull --redirect _Scanf=_ScanfFull --map
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\List\simple_saadc.map
+#        --config
+#        D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\s132\iar\ble_app_uart_iar_nRF5x.icf
+#        --semihosting --entry __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x00000000 { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x0007ffff] { ro, block RO_END };
+"P2":  place in [from 0x20000000 to 0x2000ffff] { rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+ { section .intvec };
+
+  Section             Kind        Address    Size  Object
+  -------             ----        -------    ----  ------
+"A0":                                        0x40
+  .intvec             ro code  0x00000000    0x40  vector_table_M.o [5]
+                             - 0x00000040    0x40
+
+"P1":                                      0x290c
+  .text               ro code  0x00000040   0x8e4  nrf_log_frontend.o [1]
+  .text               ro code  0x00000924   0x1f4  nrf_memobj.o [1]
+  .text               ro code  0x00000b18    0xbc  nrf_atomic.o [1]
+  .text               ro code  0x00000bd4    0x40  app_util_platform.o [1]
+  .text               ro code  0x00000c14    0xd2  nrf_balloc.o [1]
+  .text               ro code  0x00000ce6     0x2  vector_table_M.o [5]
+  .text               ro code  0x00000ce8    0x76  ABImemcpy_unaligned.o [5]
+  .text               ro code  0x00000d60   0x4b4  nrf_fprintf_format.o [1]
+  .text               ro code  0x00001214    0x44  nrf_fprintf.o [1]
+  .text               ro code  0x00001258    0x36  strlen.o [5]
+  .text               ro code  0x00001290   0x42c  nrfx_saadc.o [1]
+  .text               ro code  0x000016bc   0x254  nrf_log_str_formatter.o [1]
+  .text               ro code  0x00001910    0x3e  isprint.o [3]
+  .text               ro code  0x00001950   0x210  SEGGER_RTT.o [1]
+  .text               ro code  0x00001b60    0x44  strcpy_unaligned.o [5]
+  .rodata             const    0x00001ba4   0x128  nrf_strerror.o [1]
+  .text               ro code  0x00001ccc   0x104  main.o [1]
+  .text               ro code  0x00001dd0    0x28  app_error_handler_iar.o [1]
+  .text               ro code  0x00001df8    0x28  nrf_log_default_backends.o [1]
+  .text               ro code  0x00001e20    0xb4  app_error_weak.o [1]
+  .text               ro code  0x00001ed4    0xc4  nrf_log_backend_rtt.o [1]
+  .text               ro code  0x00001f98    0x5c  nrf_strerror.o [1]
+  .text               ro code  0x00001ff4    0x88  app_error.o [1]
+  .text               ro code  0x0000207c    0xfc  nrf_log_backend_serial.o [1]
+  .rodata             const    0x00002178    0x48  main.o [1]
+  Initializer bytes   const    0x000021c0    0x44  <for P2-1>
+  .text               ro code  0x00002204    0x40  zero_init3.o [5]
+  .rodata             const    0x00002244    0x2c  nrf_strerror.o [1]
+  .text               ro code  0x00002270    0x2c  copy_init3.o [5]
+  .rodata             const    0x0000229c    0x28  app_error_weak.o [1]
+  .rodata             const    0x000022c4    0x28  nrf_strerror.o [1]
+  .rodata             const    0x000022ec    0x28  nrf_strerror.o [1]
+  .text               ro code  0x00002314    0x28  data_init.o [5]
+  .rodata             const    0x0000233c    0x24  nrf_strerror.o [1]
+  .rodata             const    0x00002360    0x24  nrf_strerror.o [1]
+  .rodata             const    0x00002384    0x24  nrf_strerror.o [1]
+  .rodata             const    0x000023a8    0x24  nrf_strerror.o [1]
+  .rodata             const    0x000023cc    0x24  nrf_strerror.o [1]
+  .text               ro code  0x000023f0    0x22  fpinit_M.o [4]
+  .iar.init_table     const    0x00002414    0x2c  - Linker created -
+  .rodata             const    0x00002440    0x20  nrf_strerror.o [1]
+  .rodata             const    0x00002460    0x20  nrf_strerror.o [1]
+  .rodata             const    0x00002480    0x20  nrf_strerror.o [1]
+  .rodata             const    0x000024a0    0x20  nrf_strerror.o [1]
+  .rodata             const    0x000024c0    0x20  nrf_strerror.o [1]
+  log_const_data               0x000024e0    0x20  <Block>
+    log_const_data    const    0x000024e0     0x8  nrf_log_frontend.o [1]
+    log_const_data    const    0x000024e8     0x8  nrf_log_frontend.o [1]
+    log_const_data    const    0x000024f0     0x8  nrf_pwr_mgmt.o [1]
+    log_const_data    const    0x000024f8     0x8  nrfx_saadc.o [1]
+  .rodata             const    0x00002500    0x1c  app_error_weak.o [1]
+  .rodata             const    0x0000251c    0x1c  nrf_strerror.o [1]
+  .rodata             const    0x00002538    0x1c  nrf_strerror.o [1]
+  .rodata             const    0x00002554    0x1c  nrf_strerror.o [1]
+  .rodata             const    0x00002570    0x1c  nrf_strerror.o [1]
+  .rodata             const    0x0000258c    0x1c  nrf_strerror.o [1]
+  .text               ro code  0x000025a8    0x1a  cmain.o [5]
+  .text               ro code  0x000025c2     0x4  low_level_init.o [3]
+  .text               ro code  0x000025c6     0x4  exit.o [3]
+  .text               ro code  0x000025cc     0xa  cexit.o [5]
+  .text               ro code  0x000025d8    0x14  exit.o [6]
+  .rodata             const    0x000025ec    0x18  app_error_weak.o [1]
+  .rodata             const    0x00002604    0x18  nrf_log_backend_serial.o [1]
+  .rodata             const    0x0000261c    0x18  nrf_log_str_formatter.o [1]
+  .rodata             const    0x00002634    0x18  nrf_strerror.o [1]
+  .rodata             const    0x0000264c    0x18  nrf_strerror.o [1]
+  .rodata             const    0x00002664    0x18  nrf_strerror.o [1]
+  .rodata             const    0x0000267c    0x18  nrf_strerror.o [1]
+  .rodata             const    0x00002694    0x18  nrf_strerror.o [1]
+  .rodata             const    0x000026ac    0x18  nrf_strerror.o [1]
+  .rodata             const    0x000026c4    0x18  nrf_strerror.o [1]
+  .rodata             const    0x000026dc    0x18  nrf_strerror.o [1]
+  .rodata             const    0x000026f4    0x18  nrf_strerror.o [1]
+  nrf_balloc          const    0x0000270c    0x18  nrf_log_frontend.o [1]
+  .rodata             const    0x00002724    0x14  app_error_weak.o [1]
+  .rodata             const    0x00002738    0x14  nrf_log_frontend.o [1]
+  .rodata             const    0x0000274c    0x14  nrf_log_frontend.o [1]
+  .rodata             const    0x00002760    0x14  nrf_strerror.o [1]
+  .rodata             const    0x00002774    0x14  nrf_strerror.o [1]
+  .rodata             const    0x00002788    0x14  nrf_strerror.o [1]
+  .rodata             const    0x0000279c    0x14  nrf_strerror.o [1]
+  .rodata             const    0x000027b0    0x14  nrf_strerror.o [1]
+  .rodata             const    0x000027c4    0x14  nrf_strerror.o [1]
+  .rodata             const    0x000027d8    0x14  nrf_strerror.o [1]
+  .rodata             const    0x000027ec    0x14  nrf_strerror.o [1]
+  .rodata             const    0x00002800    0x10  main.o [1]
+  .rodata             const    0x00002810    0x10  nrf_fprintf_format.o [1]
+  .rodata             const    0x00002820    0x10  nrf_strerror.o [1]
+  .rodata             const    0x00002830    0x10  nrf_strerror.o [1]
+  .rodata             const    0x00002840     0xc  main.o [1]
+  .rodata             const    0x0000284c     0xc  nrf_log_backend_rtt.o [1]
+  .rodata             const    0x00002858     0xc  nrf_log_str_formatter.o [1]
+  .rodata             const    0x00002864     0xc  nrf_pwr_mgmt.o [1]
+  .rodata             const    0x00002870     0xc  nrf_strerror.o [1]
+  .rodata             const    0x0000287c     0xc  SEGGER_RTT.o [1]
+  .text               ro code  0x00002888     0xc  cstartup_M.o [5]
+  .rodata             const    0x00002894     0x8  main.o [1]
+  .rodata             const    0x000028a0     0x8  main.o [1]
+  .rodata             const    0x000028b0     0x8  nrf_log_backend_rtt.o [1]
+  .rodata             const    0x000028b8     0x8  nrf_log_str_formatter.o [1]
+  .rodata             const    0x000028c0     0x8  nrf_log_str_formatter.o [1]
+  .rodata             const    0x000028c8     0x8  nrf_log_str_formatter.o [1]
+  .rodata             const    0x000028d0     0x8  nrf_log_str_formatter.o [1]
+  .rodata             const    0x000028d8     0x8  nrf_log_str_formatter.o [1]
+  .rodata             const    0x000028e0     0x8  nrf_log_str_formatter.o [1]
+  .rodata             const    0x000028e8     0x8  nrf_log_str_formatter.o [1]
+  .rodata             const    0x000028f0     0x8  nrf_log_str_formatter.o [1]
+  .rodata             const    0x000028f8     0x8  nrf_log_str_formatter.o [1]
+  .rodata             const    0x00002900     0x8  nrf_log_str_formatter.o [1]
+  .rodata             const    0x00002908     0x8  nrf_log_str_formatter.o [1]
+  .rodata             const    0x00002910     0x8  nrf_log_str_formatter.o [1]
+  .rodata             const    0x00002918     0x8  nrf_log_str_formatter.o [1]
+  .rodata             const    0x00002920     0x8  nrf_log_str_formatter.o [1]
+  .rodata             const    0x00002928     0x8  nrfx_saadc.o [1]
+  .rodata             const    0x00002930     0x8  nrfx_saadc.o [1]
+  .rodata             const    0x00002938     0x8  SEGGER_RTT.o [1]
+  .rodata             const    0x00002940     0x4  main.o [1]
+  .rodata             const    0x00002944     0x4  nrf_fprintf.o [1]
+  .rodata             const    0x00002948     0x4  nrf_log_frontend.o [1]
+  .rodata             const    0x0000294c     0x0  zero_init3.o [5]
+  .rodata             const    0x0000294c     0x0  copy_init3.o [5]
+                             - 0x0000294c  0x290c
+
+"P2", part 1 of 4:                           0x44
+  P2-1                         0x20000000    0x44  <Init block>
+    .data             inited   0x20000000     0xc  nrf_log_default_backends.o [1]
+    .data             inited   0x2000000c    0x14  nrf_log_str_formatter.o [1]
+    .data             inited   0x20000020    0x24  nrf_log_str_formatter.o [1]
+                             - 0x20000044    0x44
+
+"P2", part 2 of 4:                           0x10
+  log_dynamic_data             0x20000044    0x10  <Block>
+    log_dynamic_data  zero     0x20000044     0x4  nrf_log_frontend.o [1]
+    log_dynamic_data  zero     0x20000048     0x4  nrf_log_frontend.o [1]
+    log_dynamic_data  zero     0x2000004c     0x4  nrf_pwr_mgmt.o [1]
+    log_dynamic_data  zero     0x20000050     0x4  nrfx_saadc.o [1]
+                             - 0x20000054    0x10
+
+"P2", part 3 of 4:                          0x800
+  CSTACK                       0x20000058   0x800  <Block>
+    CSTACK            uninit   0x20000058   0x800  <Block tail>
+                             - 0x20000858   0x800
+
+"P2", part 4 of 4:                          0xa54
+  .bss                zero     0x20000858   0x424  nrf_log_frontend.o [1]
+  .bss                zero     0x20000c7c   0x400  SEGGER_RTT.o [1]
+  .bss                zero     0x2000107c    0xc0  nrf_log_frontend.o [1]
+  .bss                zero     0x2000113c    0x80  nrf_log_backend_rtt.o [1]
+  .bss                zero     0x200011bc    0x78  SEGGER_RTT.o [1]
+  .bss                zero     0x20001234    0x30  nrfx_saadc.o [1]
+  .bss                zero     0x20001264    0x20  app_error.o [1]
+  .bss                zero     0x20001284    0x10  SEGGER_RTT.o [1]
+  .bss                zero     0x20001294     0x8  nrf_log_frontend.o [1]
+  .bss                zero     0x2000129c     0x8  nrf_log_frontend.o [1]
+  .bss                zero     0x200012a4     0x4  app_util_platform.o [1]
+  .bss                zero     0x200012a8     0x2  main.o [1]
+  .bss                zero     0x200012aa     0x1  nrf_log_backend_rtt.o [1]
+                             - 0x200012ab   0xa53
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    2 destination ranges, total size 0xa63:
+          0x20000044   0x10
+          0x20000858  0xa53
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x44:
+          0x000021c0   0x44
+    1 destination range, total size 0x44:
+          0x20000000   0x44
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                      ro code  ro data  rw data
+    ------                      -------  -------  -------
+D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Obj: [1]
+    SEGGER_RTT.o                    528       20    1 160
+    app_error.o                     136                32
+    app_error_handler_iar.o          40
+    app_error_weak.o                180      112
+    app_util_platform.o              64                 4
+    main.o                          260      120        2
+    nrf_atomic.o                    188
+    nrf_balloc.o                    210
+    nrf_fprintf.o                    68        4
+    nrf_fprintf_format.o          1 204       16
+    nrf_log_backend_rtt.o           196       20      129
+    nrf_log_backend_serial.o        252       24
+    nrf_log_default_backends.o       40       12       12
+    nrf_log_frontend.o            2 276       84    1 276
+    nrf_log_str_formatter.o         596      204       56
+    nrf_memobj.o                    500
+    nrf_pwr_mgmt.o                            20        4
+    nrf_strerror.o                   92    1 320
+    nrfx_saadc.o                  1 068       24       52
+    -----------------------------------------------------
+    Total:                        7 898    1 980    2 727
+
+command line: [2]
+    -----------------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    exit.o                            4
+    isprint.o                        62
+    low_level_init.o                  4
+    -----------------------------------------------------
+    Total:                           70
+
+m7M_tls.a: [4]
+    fpinit_M.o                       34
+    -----------------------------------------------------
+    Total:                           34
+
+rt7M_tl.a: [5]
+    ABImemcpy_unaligned.o           118
+    cexit.o                          10
+    cmain.o                          26
+    copy_init3.o                     44
+    cstartup_M.o                     12
+    data_init.o                      40
+    strcpy_unaligned.o               68
+    strlen.o                         54
+    vector_table_M.o                 66
+    zero_init3.o                     64
+    -----------------------------------------------------
+    Total:                          502
+
+shb_l.a: [6]
+    exit.o                           20
+    -----------------------------------------------------
+    Total:                           20
+
+    Gaps                             10       14
+    Linker created                            44    2 048
+---------------------------------------------------------
+    Grand Total:                  8 534    2 038    4 775
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.init_table$$Base   0x00002414          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x00002440          --   Gb  - Linker created -
+?main                   0x000025a9         Code  Gb  cmain.o [5]
+CSTACK$$Base            0x20000058          --   Gb  - Linker created -
+CSTACK$$Limit           0x20000858          --   Gb  - Linker created -
+NVIC_ClearPendingIRQ    0x000012a7   0x16  Code  Lc  nrfx_saadc.o [1]
+NVIC_EnableIRQ          0x00001291   0x16  Code  Lc  nrfx_saadc.o [1]
+NVIC_SetPriority        0x000012bd   0x2a  Code  Lc  nrfx_saadc.o [1]
+Region$$Table$$Base     0x00002414          --   Gb  - Linker created -
+Region$$Table$$Limit    0x00002440          --   Gb  - Linker created -
+SEGGER_RTT_Init         0x00001b43    0x8  Code  Gb  SEGGER_RTT.o [1]
+SEGGER_RTT_WriteNoLock  0x00001ac1   0x82  Code  Gb  SEGGER_RTT.o [1]
+_DoInit                 0x00001951   0x62  Code  Lc  SEGGER_RTT.o [1]
+_GetAvailWriteSpace     0x00001a95   0x26  Code  Lc  SEGGER_RTT.o [1]
+_NRFX_IRQ_ENABLE        0x000012fb   0x16  Code  Lc  nrfx_saadc.o [1]
+_NRFX_IRQ_PRIORITY_SET  0x000012e7   0x14  Code  Lc  nrfx_saadc.o [1]
+_SEGGER_RTT             0x200011bc   0x78  Data  Gb  SEGGER_RTT.o [1]
+_WriteBlocking          0x000019b3   0x80  Code  Lc  SEGGER_RTT.o [1]
+_WriteNoCheck           0x00001a33   0x62  Code  Lc  SEGGER_RTT.o [1]
+__ICFEDIT_region_RAM_end__ {Abs}
+                        0x2000ffff         Data  Gb  command line/config [2]
+__ICFEDIT_region_RAM_start__ {Abs}
+                        0x20000000         Data  Gb  command line/config [2]
+__cmain                 0x000025a9         Code  Gb  cmain.o [5]
+__exit                  0x000025d9   0x14  Code  Gb  exit.o [6]
+__iar_copy_init3        0x00002271   0x2c  Code  Gb  copy_init3.o [5]
+__iar_data_init3        0x00002315   0x28  Code  Gb  data_init.o [5]
+__iar_init_vfp          0x000023f1         Code  Gb  fpinit_M.o [4]
+__iar_program_start     0x00002889         Code  Gb  cstartup_M.o [5]
+__iar_unaligned___aeabi_memcpy
+                        0x00000ce9         Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_unaligned___aeabi_memcpy4
+                        0x00000d09         Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_unaligned___aeabi_memcpy8
+                        0x00000d09         Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_unaligned_strcpy  0x00001b61         Code  Gb  strcpy_unaligned.o [5]
+__iar_zero_init3        0x00002205   0x40  Code  Gb  zero_init3.o [5]
+__low_level_init        0x000025c3    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x00000000         Data  Gb  vector_table_M.o [5]
+_acDownBuffer           0x20001284   0x10  Data  Lc  SEGGER_RTT.o [1]
+_acUpBuffer             0x20000c7c  0x400  Data  Lc  SEGGER_RTT.o [1]
+_call_main              0x000025b5         Code  Gb  cmain.o [5]
+_exit                   0x000025cd         Code  Gb  cexit.o [5]
+_main                   0x000025bf         Code  Gb  cmain.o [5]
+adc_result              0x200012a8    0x2  Data  Gb  main.o [1]
+app_error_fault_handler
+                        0x00001e21   0xb4  Code  Wk  app_error_weak.o [1]
+app_error_handler       0x00001dd1   0x28  Code  Gb  app_error_handler_iar.o [1]
+app_error_save_and_stop
+                        0x00001ff5   0x82  Code  Gb  app_error.o [1]
+app_error_save_and_stop::m_error_data
+                        0x20001264   0x20  Data  Lc  app_error.o [1]
+app_util_critical_region_enter
+                        0x00000c01    0xa  Code  Gb  app_util_platform.o [1]
+app_util_critical_region_exit
+                        0x00000c0b    0xa  Code  Gb  app_util_platform.o [1]
+app_util_disable_irq    0x00000bd5    0xe  Code  Gb  app_util_platform.o [1]
+app_util_enable_irq     0x00000be3   0x16  Code  Gb  app_util_platform.o [1]
+backend_id_assign       0x0000083d   0x42  Code  Lc  nrf_log_frontend.o [1]
+buf_prealloc            0x00000361   0xda  Code  Lc  nrf_log_frontend.o [1]
+buffer_add              0x00000d61   0x20  Code  Lc  nrf_fprintf_format.o [1]
+buffer_is_empty         0x00000537   0x1a  Code  Gb  nrf_log_frontend.o [1]
+dropped_sat16_get       0x000002e5   0x14  Code  Lc  nrf_log_frontend.o [1]
+exit                    0x000025c7    0x4  Code  Gb  exit.o [3]
+init_saadc              0x00001d17   0x44  Code  Gb  main.o [1]
+int_print               0x00000edd   0xdc  Code  Lc  nrf_fprintf_format.o [1]
+invalid_packets_pushed_str_omit
+                        0x000001a7   0x70  Code  Lc  nrf_log_frontend.o [1]
+isprint                 0x00001911   0x3e  Code  Gb  isprint.o [3]
+log_const_data$$Base    0x000024e0          --   Gb  - Linker created -
+log_const_data$$Limit   0x00002500          --   Gb  - Linker created -
+log_dynamic_data$$Base  0x20000044          --   Gb  - Linker created -
+log_dynamic_data$$Limit
+                        0x20000054          --   Gb  - Linker created -
+log_mempool             0x0000270c   0x18  Data  Gb  nrf_log_frontend.o [1]
+log_mempool_nrf_balloc_cb
+                        0x2000129c    0x8  Data  Lc  nrf_log_frontend.o [1]
+log_mempool_nrf_balloc_pool_mem
+                        0x2000107c   0xc0  Data  Lc  nrf_log_frontend.o [1]
+log_mempool_nrf_balloc_pool_stack
+                        0x20001294    0x8  Data  Lc  nrf_log_frontend.o [1]
+log_skip                0x00000217   0xce  Code  Lc  nrf_log_frontend.o [1]
+m_cb                    0x20001234   0x30  Data  Lc  nrfx_saadc.o [1]
+m_colors                0x20000020   0x24  Data  Lc  nrf_log_str_formatter.o [1]
+m_host_present          0x200012aa    0x1  Data  Lc  nrf_log_backend_rtt.o [1]
+m_in_critical_region    0x200012a4    0x4  Data  Lc  app_util_platform.o [1]
+m_log_data              0x20000858  0x424  Data  Lc  nrf_log_frontend.o [1]
+m_nrf_log_SAADC_logs_data_const
+                        0x000024f8    0x8  Data  Gb  nrfx_saadc.o [1]
+m_nrf_log_SAADC_logs_data_dynamic
+                        0x20000050    0x4  Data  Gb  nrfx_saadc.o [1]
+m_nrf_log_app_logs_data_const
+                        0x000024e8    0x8  Data  Gb  nrf_log_frontend.o [1]
+m_nrf_log_app_logs_data_dynamic
+                        0x20000048    0x4  Data  Gb  nrf_log_frontend.o [1]
+m_nrf_log_balloc_log_mempool_logs_data_const
+                        0x000024e0    0x8  Data  Gb  nrf_log_frontend.o [1]
+m_nrf_log_balloc_log_mempool_logs_data_dynamic
+                        0x20000044    0x4  Data  Gb  nrf_log_frontend.o [1]
+m_nrf_log_pwr_mgmt_logs_data_const
+                        0x000024f0    0x8  Data  Gb  nrf_pwr_mgmt.o [1]
+m_nrf_log_pwr_mgmt_logs_data_dynamic
+                        0x2000004c    0x4  Data  Gb  nrf_pwr_mgmt.o [1]
+m_string_buff           0x2000113c   0x80  Data  Lc  nrf_log_backend_rtt.o [1]
+m_unknown_str           0x000027ec   0x14  Data  Lc  nrf_strerror.o [1]
+main                    0x00001d67   0x46  Code  Gb  main.o [1]
+memobj_op               0x00000a2f   0xb2  Code  Lc  nrf_memobj.o [1]
+module_idx_get          0x00000103   0x3c  Code  Lc  nrf_log_frontend.o [1]
+nrf_atomic_flag_clear_fetch
+                        0x00000bc7    0xe  Code  Gb  nrf_atomic.o [1]
+nrf_atomic_flag_set     0x00000bb9    0xe  Code  Gb  nrf_atomic.o [1]
+nrf_atomic_u32_add      0x00000b79   0x20  Code  Gb  nrf_atomic.o [1]
+nrf_atomic_u32_fetch_and
+                        0x00000b59   0x20  Code  Gb  nrf_atomic.o [1]
+nrf_atomic_u32_fetch_store
+                        0x00000b19   0x1e  Code  Gb  nrf_atomic.o [1]
+nrf_atomic_u32_or       0x00000b39   0x20  Code  Gb  nrf_atomic.o [1]
+nrf_atomic_u32_sub      0x00000b99   0x20  Code  Gb  nrf_atomic.o [1]
+nrf_balloc_alloc        0x00000c6f   0x50  Code  Gb  nrf_balloc.o [1]
+nrf_balloc_block2idx    0x00000c23    0xe  Code  Lc  nrf_balloc.o [1]
+nrf_balloc_free         0x00000cbf   0x28  Code  Gb  nrf_balloc.o [1]
+nrf_balloc_idx2block    0x00000c15    0xe  Code  Lc  nrf_balloc.o [1]
+nrf_balloc_init         0x00000c31   0x3e  Code  Gb  nrf_balloc.o [1]
+nrf_delay_ms            0x00001cff   0x18  Code  Lc  main.o [1]
+nrf_delay_ms            0x00001eef   0x18  Code  Lc  nrf_log_backend_rtt.o [1]
+nrf_drv_saadc_init      0x00001ce7   0x18  Code  Lc  main.o [1]
+nrf_drv_saadc_init{1}{2}::default_config
+                        0x00002940    0x4  Data  Lc  main.o [1]
+nrf_fprintf             0x0000122f   0x26  Code  Gb  nrf_fprintf.o [1]
+nrf_fprintf_buffer_flush
+                        0x00001215   0x1a  Code  Gb  nrf_fprintf.o [1]
+nrf_fprintf_fmt         0x00000fb9  0x25c  Code  Gb  nrf_fprintf_format.o [1]
+nrf_log_backend_add     0x0000087f   0x4e  Code  Gb  nrf_log_frontend.o [1]
+nrf_log_backend_enable  0x00001df9    0x6  Code  Lc  nrf_log_default_backends.o [1]
+nrf_log_backend_enable  0x00000077    0x6  Code  Lc  nrf_log_frontend.o [1]
+nrf_log_backend_flush   0x00000061    0xe  Code  Lc  nrf_log_frontend.o [1]
+nrf_log_backend_id_get  0x00000073    0x4  Code  Lc  nrf_log_frontend.o [1]
+nrf_log_backend_id_set  0x0000006f    0x4  Code  Lc  nrf_log_frontend.o [1]
+nrf_log_backend_is_enabled
+                        0x0000007d    0x4  Code  Lc  nrf_log_frontend.o [1]
+nrf_log_backend_panic_set
+                        0x00000053    0xe  Code  Lc  nrf_log_frontend.o [1]
+nrf_log_backend_put     0x00000041   0x12  Code  Lc  nrf_log_frontend.o [1]
+nrf_log_backend_rtt_api
+                        0x0000284c    0xc  Data  Gb  nrf_log_backend_rtt.o [1]
+nrf_log_backend_rtt_flush
+                        0x00001f95    0x2  Code  Lc  nrf_log_backend_rtt.o [1]
+nrf_log_backend_rtt_init
+                        0x00001f07    0x8  Code  Gb  nrf_log_backend_rtt.o [1]
+nrf_log_backend_rtt_panic_set
+                        0x00001f97    0x2  Code  Lc  nrf_log_backend_rtt.o [1]
+nrf_log_backend_rtt_put
+                        0x00001f6d   0x18  Code  Lc  nrf_log_backend_rtt.o [1]
+nrf_log_backend_serial_put
+                        0x0000207d   0xfc  Code  Gb  nrf_log_backend_serial.o [1]
+nrf_log_color_id_get    0x00000165   0x42  Code  Gb  nrf_log_frontend.o [1]
+nrf_log_default_backends_init
+                        0x00001dff   0x1c  Code  Gb  nrf_log_default_backends.o [1]
+nrf_log_frontend_dequeue
+                        0x00000551  0x2ec  Code  Gb  nrf_log_frontend.o [1]
+nrf_log_frontend_std_0  0x000004af   0x14  Code  Gb  nrf_log_frontend.o [1]
+nrf_log_frontend_std_1  0x000004c3   0x1a  Code  Gb  nrf_log_frontend.o [1]
+nrf_log_frontend_std_2  0x000004dd   0x1e  Code  Gb  nrf_log_frontend.o [1]
+nrf_log_frontend_std_5  0x000004fb   0x3c  Code  Gb  nrf_log_frontend.o [1]
+nrf_log_hexdump_entry_process
+                        0x00001837   0xa6  Code  Gb  nrf_log_str_formatter.o [1]
+nrf_log_init            0x00000081   0x74  Code  Gb  nrf_log_frontend.o [1]
+nrf_log_module_cnt_get  0x000000f5    0xe  Code  Gb  nrf_log_frontend.o [1]
+nrf_log_module_name_get
+                        0x0000013f   0x26  Code  Gb  nrf_log_frontend.o [1]
+nrf_log_panic           0x000008cd   0x26  Code  Gb  nrf_log_frontend.o [1]
+nrf_log_std_entry_process
+                        0x00001763   0xd4  Code  Gb  nrf_log_str_formatter.o [1]
+nrf_memobj_alloc        0x00000931   0x84  Code  Gb  nrf_memobj.o [1]
+nrf_memobj_free         0x000009b5   0x4a  Code  Gb  nrf_memobj.o [1]
+nrf_memobj_get          0x000009ff    0xe  Code  Gb  nrf_memobj.o [1]
+nrf_memobj_pool_init    0x00000925    0xc  Code  Gb  nrf_memobj.o [1]
+nrf_memobj_put          0x00000a0d   0x22  Code  Gb  nrf_memobj.o [1]
+nrf_memobj_read         0x00000afd   0x1c  Code  Gb  nrf_memobj.o [1]
+nrf_memobj_write        0x00000ae1   0x1c  Code  Gb  nrf_memobj.o [1]
+nrf_saadc_buffer_init   0x000013af    0xe  Code  Lc  nrfx_saadc.o [1]
+nrf_saadc_channel_init  0x000013d1   0x62  Code  Lc  nrfx_saadc.o [1]
+nrf_saadc_channel_input_set
+                        0x0000136b   0x20  Code  Lc  nrfx_saadc.o [1]
+nrf_saadc_disable       0x000013a5    0xa  Code  Lc  nrfx_saadc.o [1]
+nrf_saadc_enable        0x0000139b    0xa  Code  Lc  nrfx_saadc.o [1]
+nrf_saadc_event_check   0x00001339   0x16  Code  Lc  nrfx_saadc.o [1]
+nrf_saadc_event_clear   0x0000134f   0x1c  Code  Lc  nrfx_saadc.o [1]
+nrf_saadc_int_disable   0x00001393    0x8  Code  Lc  nrfx_saadc.o [1]
+nrf_saadc_int_enable    0x0000138b    0x8  Code  Lc  nrfx_saadc.o [1]
+nrf_saadc_oversample_set
+                        0x000013c7    0xa  Code  Lc  nrfx_saadc.o [1]
+nrf_saadc_resolution_set
+                        0x000013bd    0xa  Code  Lc  nrfx_saadc.o [1]
+nrf_saadc_task_trigger  0x0000132d    0xc  Code  Lc  nrfx_saadc.o [1]
+nrf_strerror_array      0x00001ba4  0x128  Data  Lc  nrf_strerror.o [1]
+nrf_strerror_find       0x00001fad   0x3c  Code  Gb  nrf_strerror.o [1]
+nrf_strerror_get        0x00001f99   0x14  Code  Gb  nrf_strerror.o [1]
+nrfx_coredep_delay_us   0x00001ccd   0x1a  Code  Lc  main.o [1]
+nrfx_coredep_delay_us   0x00001ed5   0x1a  Code  Lc  nrf_log_backend_rtt.o [1]
+nrfx_coredep_delay_us   0x00001311   0x1c  Code  Lc  nrfx_saadc.o [1]
+nrfx_coredep_delay_us::delay_bytecode
+                        0x000028a0    0x8  Data  Lc  main.o [1]
+nrfx_coredep_delay_us::delay_bytecode
+                        0x000028b0    0x8  Data  Lc  nrf_log_backend_rtt.o [1]
+nrfx_coredep_delay_us::delay_bytecode
+                        0x00002930    0x8  Data  Lc  nrfx_saadc.o [1]
+nrfx_saadc_channel_init
+                        0x000014e1   0x94  Code  Gb  nrfx_saadc.o [1]
+nrfx_saadc_init         0x00001433   0xae  Code  Gb  nrfx_saadc.o [1]
+nrfx_saadc_sample_convert
+                        0x00001575  0x10c  Code  Gb  nrfx_saadc.o [1]
+postfix_process         0x00001723   0x40  Code  Lc  nrf_log_str_formatter.o [1]
+prefix_process          0x000016bf   0x64  Code  Lc  nrf_log_str_formatter.o [1]
+rtt_log_backend         0x20000000    0xc  Data  Lc  nrf_log_default_backends.o [1]
+serial_tx               0x00001f0f   0x5e  Code  Lc  nrf_log_backend_rtt.o [1]
+severity_names          0x2000000c   0x14  Data  Lc  nrf_log_str_formatter.o [1]
+std_header_set          0x000002f9   0x68  Code  Lc  nrf_log_frontend.o [1]
+std_n                   0x0000043b   0x74  Code  Lc  nrf_log_frontend.o [1]
+string_print            0x00000d81   0x8c  Code  Lc  nrf_fprintf_format.o [1]
+strlen                  0x00001259         Code  Gb  strlen.o [5]
+take_adc_sample         0x00001d5b    0xc  Code  Gb  main.o [1]
+timestamp_print         0x000016bd    0x2  Code  Lc  nrf_log_str_formatter.o [1]
+unsigned_print          0x00000e0d   0xcc  Code  Lc  nrf_fprintf_format.o [1]
+unsigned_print::_aV2C   0x00002810   0x10  Data  Lc  nrf_fprintf_format.o [1]
+
+
+[1] = D:\Github\saadc_simple\nrf52_simple_saadc\firmware\iar_project\nrf52832_xxaa\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = m7M_tls.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  8 534 bytes of readonly  code memory
+  2 038 bytes of readonly  data memory
+  4 775 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
